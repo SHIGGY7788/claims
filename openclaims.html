@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="openclaims.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="wrap">
+    <div class="main">
+        <p id="noclaims" class="noclaims">You currently have no open claims.</p>
+        <div class="claimSelect" id="selection">
+            <select class="selection" name="claims">
+                <option value="default" onclick="DisplayClaim">Select your claim</option>
+                <option id="claim1" class="options" value="claim1" onclick="DisplayClaim"></option>
+                <option id="claim2" class="options" value="claim2" onclick="DisplayClaim"></option>
+                <option id="claim3" class="options" value="claim3" onclick="DisplayClaim"></option>
+                <option id="claim4" class="options"></option>
+                <option id="claim5" class="options"></option>
+            </select>
+        </div>
+        <div class="claimContent">
+            <table class="claimTable">
+                <tr>
+                    <th>Business</th>
+                    <th>Submission Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td id="claimBusiness">Ex</td>
+                    <td id="claimDate">Ex</td>
+                    <td id="claimAmount">Ex</td>
+                    <td id="claimStatus">Ex</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="js/openclaims.js"></script>
+</body>
+</html>
