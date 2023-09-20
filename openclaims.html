@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="openclaims.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Claims Center</title>
 </head>
 <body>
 
@@ -12,16 +12,12 @@
     <div class="main">
         <p id="noclaims" class="noclaims">You currently have no open claims.</p>
         <div class="claimSelect" id="selection">
-            <select class="selection" name="claims">
-                <option value="default" onclick="DisplayClaim">Select your claim</option>
-                <option id="claim1" class="options" value="claim1" onclick="DisplayClaim"></option>
-                <option id="claim2" class="options" value="claim2" onclick="DisplayClaim"></option>
-                <option id="claim3" class="options" value="claim3" onclick="DisplayClaim"></option>
-                <option id="claim4" class="options"></option>
-                <option id="claim5" class="options"></option>
+            <select class="selection" name="claims" onchange="DisplayClaim()" id="claims">
+                <option id="claim0" class="options" value="default">Select your claim</option>
+                <option id="claim1" class="options" value="claim1"></option>
             </select>
         </div>
-        <div class="claimContent">
+        <div class="claimContent" id="claimContent">
             <table class="claimTable">
                 <tr>
                     <th>Business</th>
@@ -29,11 +25,11 @@
                     <th>Amount</th>
                     <th>Status</th>
                 </tr>
-                <tr>
-                    <td id="claimBusiness">Ex</td>
-                    <td id="claimDate">Ex</td>
-                    <td id="claimAmount">Ex</td>
-                    <td id="claimStatus">Ex</td>
+                <tr class="tableData">
+                    <td id="claimBusiness"></td>
+                    <td id="claimDate"></td>
+                    <td id="claimAmount"></td>
+                    <td id="claimStatus"></td>
                 </tr>
             </table>
         </div>
